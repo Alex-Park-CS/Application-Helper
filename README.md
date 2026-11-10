@@ -4,7 +4,14 @@
 
 A personal job-application tracker with AI-assisted resume tailoring, built for a habit of 5 quality applications a day.
 
-> Work in progress. Milestone 1 (tracker MVP) is done; see `claude.md` for the roadmap.
+> Work in progress. Roadmap:
+>
+> - [x] **M1** Tracker: add, edit, delete, filter and sort applications
+> - [ ] **M2** Today panel: daily goal progress and follow-ups due
+> - [ ] **M3** AI tailoring: match summary, keywords, bullets and cover letter from a job post (Claude API)
+> - [ ] **M4** Stats and CSV import/export
+> - [ ] **M5** Gmail sync: suggested status updates from application emails
+> - [ ] **M6** Polish: screenshots, docs, optional deploy
 
 ## Run locally
 
