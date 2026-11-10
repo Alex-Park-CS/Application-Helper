@@ -3,6 +3,7 @@ import type { Application } from "@/generated/prisma/client";
 import type { SortKey, Status } from "@/lib/applications/constants";
 import { type Filters, toQueryString } from "@/lib/applications/filters";
 import { formatDate } from "@/lib/dates";
+import { DeleteButton } from "./DeleteButton";
 import { StatusSelect } from "./StatusSelect";
 
 type Column = { key: SortKey; label: string; className?: string };
@@ -39,6 +40,9 @@ export function ApplicationTable({ applications, filters }: { applications: Appl
               </th>
             ))}
             <th className="hidden px-3 py-2 font-medium lg:table-cell">Source</th>
+            <th className="px-3 py-2">
+              <span className="sr-only">Actions</span>
+            </th>
           </tr>
         </thead>
         <tbody className="divide-y divide-slate-100">
@@ -61,6 +65,9 @@ export function ApplicationTable({ applications, filters }: { applications: Appl
               <td className="hidden px-3 py-2 whitespace-nowrap sm:table-cell">{formatDate(app.dateApplied)}</td>
               <td className="hidden px-3 py-2 whitespace-nowrap md:table-cell">{formatDate(app.dateFound)}</td>
               <td className="hidden px-3 py-2 lg:table-cell">{app.source}</td>
+              <td className="px-3 py-2 text-right">
+                <DeleteButton id={app.id} company={app.company} compact />
+              </td>
             </tr>
           ))}
         </tbody>

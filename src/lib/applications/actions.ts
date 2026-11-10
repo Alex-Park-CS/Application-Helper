@@ -31,7 +31,9 @@ export async function updateStatus(id: number, status: string) {
   refresh(); // re-render the current page with fresh data
 }
 
-export async function deleteApplication(id: number) {
+/** From the list, stay on the page (keeps filters). From the edit page nothing is left to show, so go to the list. */
+export async function deleteApplication(id: number, { goToList = false } = {}) {
   await db.application.delete({ where: { id } });
-  redirect("/");
+  if (goToList) redirect("/");
+  refresh();
 }

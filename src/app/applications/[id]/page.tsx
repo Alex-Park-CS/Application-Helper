@@ -25,7 +25,7 @@ async function EditApplication({ params }: { params: Promise<{ id: string }> }) 
         <h1 className="text-xl font-semibold">
           {application.company} <span className="font-normal text-slate-500">— {application.roleTitle}</span>
         </h1>
-        <DeleteButton id={application.id} />
+        <DeleteButton id={application.id} company={application.company} goToList />
       </div>
       <ApplicationForm
         action={saveApplication.bind(null, application.id)}
