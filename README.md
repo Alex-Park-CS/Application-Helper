@@ -1,5 +1,7 @@
 # Application Helper
 
+[![CI](https://github.com/Alex-Park-CS/Application-Helper/actions/workflows/ci.yml/badge.svg)](https://github.com/Alex-Park-CS/Application-Helper/actions/workflows/ci.yml)
+
 A personal job-application tracker with AI-assisted resume tailoring, built for a habit of 5 quality applications a day.
 
 > Work in progress. Milestone 1 (tracker MVP) is done; see `claude.md` for the roadmap.
@@ -39,3 +41,7 @@ src/lib/applications/
 src/components/               UI components
 src/app/                      Routes: list, new, edit
 ```
+
+## License
+
+MIT
